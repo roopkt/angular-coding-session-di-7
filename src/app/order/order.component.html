@@ -1,0 +1,3 @@
+<div *ngFor="let lineItem of lineItems|async" trackby>
+	<app-line-item [lineItem]="lineItem" (lineItemSaved)="onLineItemSaved($event)"></app-line-item>
+</div>

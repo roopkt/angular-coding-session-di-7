@@ -1,0 +1,23 @@
+<div class="form-group">
+	<label for="name">Name:</label>
+  {{lineItem.name}}
+  </div>
+
+<div class="form-group">
+	<label for="price">Price</label>
+    <input   [(ngModel)]="lineItem.price" class="form-control" id="price"   placeholder="Enter Price">
+    
+  </div>
+  <div class="form-group">
+    <label for="quantity">Quantity</label>
+    <input type="number" class="form-control"  [(ngModel)]="lineItem.quantity"  id="quantity" placeholder="Enter Quantity">
+  </div>
+
+ <div class="form-group">
+	<label for="price"><b>Total Price:</b></label>
+    
+    {{ lineItem.price*lineItem.quantity }}
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="onSaved()" >Save</button>
+
+    <button type="submit" class="btn btn-warning" (click)="onCanceled()">Cancel</button>
